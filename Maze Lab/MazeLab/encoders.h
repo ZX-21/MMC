@@ -2,15 +2,15 @@
 #include <Arduino.h>
 #include <stdint.h>
 
-#define WHEEL_DIAMETER 32.1      // mm
-#define WHEEL_DISTANCE 90.1        // mm
-#define ENCODER_PULSES_PER_REV 620
+#define WHEEL_DIAMETER 33.1      // mm
+#define WHEEL_DISTANCE 81.1        // mm
+#define ENCODER_PULSES_PER_REV 703
 #define PI 3.14159265359
 
 #define ENC_LEFT_A 2
 #define ENC_LEFT_B 4
 #define ENC_RIGHT_A 3
-#define ENC_RIGHT_B 5
+#define ENC_RIGHT_B 7
 
 // Forward declaration of the class and global instance
 class Encoders;
@@ -199,3 +199,4 @@ inline void rightEncoderISR() {
   // Similarly, use pin 5 (ENC_RIGHT_B) for direction.
   encoders.rightEncoderCount += (PIND & (1 << PIND5)) ? 1 : -1;
 }
+
